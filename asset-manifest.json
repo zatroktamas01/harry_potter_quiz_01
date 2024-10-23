@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/harry_potter_quiz_01/static/css/main.1547f611.css",
+    "main.js": "/harry_potter_quiz_01/static/js/main.ea41869c.js",
+    "static/media/HARRYP__.TTF": "/harry_potter_quiz_01/static/media/HARRYP__.a65869c0c1a4b3d4fcfc.TTF",
+    "index.html": "/harry_potter_quiz_01/index.html",
+    "main.1547f611.css.map": "/harry_potter_quiz_01/static/css/main.1547f611.css.map",
+    "main.ea41869c.js.map": "/harry_potter_quiz_01/static/js/main.ea41869c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1547f611.css",
+    "static/js/main.ea41869c.js"
+  ]
+}
