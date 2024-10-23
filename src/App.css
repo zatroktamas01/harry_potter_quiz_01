@@ -175,21 +175,25 @@ body {
 }
 
 .start-screen h1 {
-  font-size: 4rem; /* Nagy betűméret a címsorhoz */
-  text-shadow: 0 0 20px #ffcc00, 0 0 30px #ffff99, 0 0 40px #ffcc00; /* Fénylő árnyék a szöveg mögött */
+  font-size: 4rem; /* Betűméret a címsorhoz, de nem változtatunk ezen */
+  font-weight: bold; /* Félkövér stílus a jobb láthatóság érdekében */
+  color: #ffd700; /* Élénk arany szín a szöveghez */
+  /* Csökkentett szövegárnyék a világító hatás mérséklésére, de az élesebb láthatóság érdekében */
+  text-shadow: 2px 2px 5px #000, 0 0 10px #ffd700, 0 0 15px #ffd700; 
   margin-bottom: 40px; /* Térköz a címsor alatt */
-  animation: flicker 3s infinite; /* Folyamatosan villogó hatás */
 }
 
 @keyframes flicker {
   0% {
-    opacity: 1; /* Teljesen látható */
+    text-shadow: 2px 2px 5px #000, 0 0 10px #ffd700, 0 0 15px #ffd700; /* Kevésbé világító, de jól látható árnyék */
   }
   50% {
-    opacity: 0.8; /* Enyhén halványabb */
+    text-shadow: 2px 2px 5px #000, 0 0 8px #ffcc00, 0 0 10px #ffd700; /* Enyhén változó, de még mindig éles árnyék */
+    color: #ffeb3b; /* Világosabb arany szín */
   }
   100% {
-    opacity: 1; /* Vissza teljesen látható állapotba */
+    text-shadow: 2px 2px 5px #000, 0 0 10px #ffd700, 0 0 15px #ffd700; /* Visszatérés az eredeti árnyékhoz */
+    color: #ffd700; /* Élénk arany szín */
   }
 }
 
@@ -197,20 +201,21 @@ body {
   font-size: 32px; /* Nagy betűméret a start gombhoz */
   padding: 30px 60px; /* Nagyobb belső tér a gombon belül */
   background-color: #5d4037; /* Barna háttérszín */
-  color: #ffcc00; /* Arany szöveg */
+  color: #ffd700; /* Élénk arany szöveg */
   border: 3px solid #ffcc00; /* Arany keret a gomb körül */
   border-radius: 15px; /* Lekerekített sarkak */
   cursor: pointer; /* Kéz kurzor a gomb fölött */
+  box-shadow: 0 0 10px #ffcc00, 0 0 15px #ffff99, 0 0 20px #ffcc00; /* Csökkentett árnyék a gomb körül */
   transition: background-color 0.3s ease, transform 0.3s ease; /* Simított átmenet hover állapothoz */
-  box-shadow: 0 0 20px #ffcc00, 0 0 30px #ffff99, 0 0 40px #ffcc00; /* Fénylő gombhatás */
   margin-top: 40px; /* Térköz a gomb fölött */
 }
 
 .start-button:hover {
   background-color: #795548; /* Sötétebb barna hover állapotban */
   transform: scale(1.1); /* Kicsit nagyobb gomb hover állapotban */
-  box-shadow: 0 0 40px #ffcc00, 0 0 60px #ffff99, 0 0 80px #ffcc00; /* Erősebb fény hatás hover állapotban */
+  box-shadow: 0 0 20px #ffcc00, 0 0 30px #ffff99, 0 0 40px #ffcc00; /* Kevésbé intenzív fényhatás hover állapotban */
 }
+
 
 @keyframes fadeIn {
   from {
