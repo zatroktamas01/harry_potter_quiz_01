@@ -1,186 +1,184 @@
 @font-face {
-  font-family: 'Harry Potter'; /* Egyedi Harry Potter betűtípus használata */
-  src: url('./fonts/HARRYP__.TTF') format('truetype'); /* A betűtípus elérési útja */
+  font-family: 'Harry Potter'; /* Egyedi Harry Potter betűtípus hozzáadása */
+  src: url('./fonts/HARRYP__.TTF') format('truetype'); /* A betűtípus elérési útjának megadása */
 }
 
 body {
-  margin: 0; /* Nincs külső margó a test körül */
-  padding: 0; /* Nincs belső margó a test körül */
-  background-color: #1b1b1b; /* Sötét háttérszín a misztikus hangulathoz */
-  color: #f5deb3; /* Világos, arany szöveg a sötét háttér előtt */
-  font-family: 'Harry Potter', sans-serif; /* Harry Potter betűtípus alkalmazása */
-  display: flex; /* A tartalom Flexbox segítségével középre igazítva */
-  justify-content: center; /* A tartalom vízszintesen középre helyezése */
-  align-items: center; /* A tartalom függőlegesen középre helyezése */
-  min-height: 100vh; /* A teljes magasságú nézetablak betöltése */
+  margin: 0; /* Nincs külső margó a test elem körül */
+  padding: 0; /* Nincs belső margó a test elem körül */
+  background-color: #1b1b1b; /* A háttér sötét szürke színt kap a misztikus hatás érdekében */
+  color: #f5deb3; /* A szöveg világosbarna színe */
+  font-family: 'Harry Potter', sans-serif; /* Harry Potter betűtípus használata */
+  display: flex; /* Flexbox elrendezés használata a testben */
+  justify-content: center; /* A tartalom középre igazítása vízszintesen */
+  align-items: center; /* A tartalom középre igazítása függőlegesen */
+  min-height: 100vh; /* A test legalább az ablak magasságát foglalja el */
   text-align: center; /* A szövegek középre igazítása */
 }
 
 .app {
-  display: flex; /* Flexbox használata a belső elrendezéshez */
-  flex-direction: column; /* A gyerek elemek (kérdések, gombok) függőlegesen helyezkednek el */
-  align-items: center; /* A belső elemek vízszintesen középre igazítása */
-  justify-content: center; /* Függőleges igazítás középen */
-  width: 90%; /* Az app szélessége a nézetablak 90%-a */
-  max-width: 1200px; /* A maximális szélesség 1200px */
-  background-color: #3e2723; /* Sötétbarna háttér a tartalmak mögött */
-  padding: 40px; /* Nagyobb belső tér a doboz körül */
-  border-radius: 20px; /* Lekerekített sarkak a dobozra */
-  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.7); /* Árnyék a misztikus megjelenésért */
+  display: flex; /* Flexbox elrendezés a fő alkalmazáshoz */
+  flex-direction: column; /* A gyermekelemek (pl. kérdések, válaszok) egymás alatt helyezkednek el */
+  align-items: center; /* A tartalom vízszintesen középre igazítása */
+  justify-content: center; /* A tartalom függőlegesen középre igazítása */
+  width: 90%; /* Az alkalmazás szélessége a nézetablak 90%-a */
+  max-width: 1200px; /* Maximális szélesség 1200px */
+  background-color: #3e2723; /* Sötétbarna háttérszín */
+  padding: 40px; /* Belül 40px távolság a tartalomtól */
+  border-radius: 20px; /* Lekerekített sarkak */
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.7); /* Árnyék a doboz körül, hogy mélységet adjon */
 }
 
 .question-section {
-  background-color: #4b2c20; /* Még sötétebb háttér a kérdések mögött */
+  background-color: #4b2c20; /* Sötétbarna háttérszín a kérdések szekciójának */
   border-radius: 15px; /* Lekerekített sarkak */
-  padding: 40px; /* Tágabb belső tér a kérdés körül */
-  margin-bottom: 40px; /* Térköz a kérdés és az alatta lévő elemek között */
-  width: 100%; /* A kérdés szekció teljes szélességet kitölt */
+  padding: 40px; /* Belső tér a kérdés szekció körül */
+  margin-bottom: 40px; /* Térköz az alatta lévő elemekhez */
+  width: 100%; /* A szekció teljes szélességét kitölti */
 }
 
 .question-count {
-  font-size: 36px; /* Nagyobb betűméret a kérdések számlálójának */
-  color: #ffcc00; /* Arany szín a misztikus hangulathoz */
+  font-size: 36px; /* Nagyobb betűméret a kérdés számlálóhoz */
+  color: #ffcc00; /* Arany szín a számlálóhoz */
   margin-bottom: 20px; /* Térköz a számláló és a kérdés szövege között */
 }
 
 .question-text {
   font-size: 48px; /* Nagyobb betűméret a kérdésekhez */
-  margin-bottom: 40px; /* Térköz a kérdés szövege és az opciók között */
-  color: #ffcc00; /* Arany szín a kérdések szövegére */
-  animation: lightning-effect 1.5s infinite alternate; /* Folyamatos villámlás hatás */
+  margin-bottom: 40px; /* Térköz a kérdés és a válaszlehetőségek között */
+  color: #ffcc00; /* Arany szín a kérdésekhez */
+  animation: lightning-effect 1.5s infinite alternate; /* Folyamatos villámlás effektus a kérdés szövegére */
 }
 
 @keyframes lightning-effect {
-  /* Villám hatású animáció a kérdések szövegéhez */
   0% {
-    text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ffff66; /* Sárgás fény hatású árnyék */
+    text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ffff66; /* Kezdeti sárgás árnyék */
   }
   50% {
-    text-shadow: 0 0 20px #ffff66, 0 0 40px #ffcc00, 0 0 60px #ffff66; /* Erősebb sárgás árnyék */
-    color: #fff700; /* Fényesebb sárga szín */
+    text-shadow: 0 0 20px #ffff66, 0 0 40px #ffcc00, 0 0 60px #ffff66; /* Erősebb árnyék a villám hatáshoz */
+    color: #fff700; /* A szöveg világosabbá válik a villám hatás közben */
   }
   100% {
-    text-shadow: 0 0 10px #ffcc00, 0 0 30px #ffcc00, 0 0 50px #ffff66; /* Újra halványabb sárga */
+    text-shadow: 0 0 10px #ffcc00, 0 0 30px #ffcc00, 0 0 50px #ffff66; /* Vissza az eredeti sárga árnyékhoz */
     color: #ffcc00; /* Eredeti arany szín */
   }
 }
 
 .answer-section {
-  display: flex; /* Flexbox használata az opciók elrendezéséhez */
-  flex-direction: column; /* Függőleges elrendezés az opciókhoz */
-  align-items: center; /* Középre igazított opciók */
-  width: 100%; /* Teljes szélességű opció szekció */
+  display: flex; /* Flexbox elrendezés a válaszokhoz */
+  flex-direction: column; /* A válaszok egymás alatt helyezkednek el */
+  align-items: center; /* Vízszintesen középre igazított válaszok */
+  width: 100%; /* A válasz szekció teljes szélességű */
 }
 
 .answer-section button {
-  width: 100%; /* A gombok teljes szélességet foglalnak el */
-  height: 80px; /* Magasabb gombok a könnyű kattintás érdekében */
+  width: 100%; /* A gombok teljes szélességűek */
+  height: 80px; /* Magas gombok */
   margin: 10px 0; /* Térköz a gombok között */
-  font-size: 32px; /* Nagyobb betűméret a gomb szövegéhez */
-  font-family: 'Harry Potter', sans-serif; /* Egyedi Harry Potter betűtípus a gombokhoz */
-  cursor: pointer; /* Kéz kurzor, amikor a gomb fölé viszi az egeret */
-  border: none; /* Nincs keret a gomb körül */
-  border-radius: 10px; /* Lekerekített gomb sarkak */
-  background-color: #5d4037; /* Barna háttérszín */
-  color: #ffcc00; /* Arany szín a szövegekhez */
-  transition: background-color 0.3s, transform 0.2s; /* Simított átmenet a hover effektekhez */
-  text-transform: uppercase; /* Nagybetűs gomb szöveg */
+  font-size: 32px; /* Nagyobb betűméret a gombokhoz */
+  font-family: 'Harry Potter', sans-serif; /* Harry Potter betűtípus a gombokhoz */
+  cursor: pointer; /* Mutató kéz kurzor a gombok fölött */
+  border: none; /* Nincs keret a gombokon */
+  border-radius: 10px; /* Lekerekített sarkak a gombokon */
+  background-color: #5d4037; /* Sötétbarna háttérszín a gombokhoz */
+  color: #ffcc00; /* Arany színű szöveg a gombokhoz */
+  transition: background-color 0.3s, transform 0.2s; /* Simított átmenet a hover és méretváltozásokhoz */
+  text-transform: uppercase; /* A gombok szövege nagybetűs */
 }
 
 .answer-section button:hover {
-  background-color: #795548; /* Sötétebb barna, amikor az egér fölötte van */
-  transform: scale(1.05); /* A gomb enyhén megnő hover esetén */
+  background-color: #795548; /* Sötétebb barna, amikor az egér fölé megy */
+  transform: scale(1.05); /* A gombok nagyobbak lesznek hover esetén */
 }
 
 .answer-section button.correct {
-  background-color: #4caf50; /* Zöld szín a helyes válasz esetén */
-  color: white; /* Fehér szöveg a helyes válasz gombján */
+  background-color: #4caf50; /* Zöld háttér a helyes válaszoknál */
+  color: white; /* Fehér szöveg a helyes válaszoknál */
 }
 
 .answer-section button.incorrect {
-  background-color: #f44336; /* Piros szín a helytelen válasz esetén */
-  color: white; /* Fehér szöveg a helytelen válasz gombján */
+  background-color: #f44336; /* Piros háttér a helytelen válaszoknál */
+  color: white; /* Fehér szöveg a helytelen válaszoknál */
 }
 
 .score-section {
-  font-size: 40px; /* Nagyobb betűméret a pontszám kijelzéséhez */
+  font-size: 40px; /* Nagy betűméret a pontszám kijelzéséhez */
   font-weight: bold; /* Félkövér szöveg a pontszámhoz */
-  background-color: #4b2c20; /* Sötétbarna háttér a pontszám körül */
+  background-color: #4b2c20; /* Sötétbarna háttér a pontszám kijelzéséhez */
   padding: 40px; /* Tág belső tér a pontszám szekció körül */
-  border-radius: 15px; /* Lekerekített sarkak a pontszám kijelzőjén */
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); /* Halvány árnyék körülötte */
-  width: 100%; /* A pontszám szekció teljes szélességet foglal el */
+  border-radius: 15px; /* Lekerekített sarkak a pontszám szekción */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); /* Árnyék a pontszám szekció körül */
+  width: 100%; /* A pontszám kijelző teljes szélességű */
 }
 
 .language-switcher {
-  margin-bottom: 40px; /* Térköz a nyelvváltó alatt */
+  margin-bottom: 40px; /* Térköz a nyelvváltó szekció alatt */
 }
 
 .language-switcher button {
   font-size: 24px; /* Nagyobb betűméret a nyelvváltó gombokhoz */
-  padding: 15px 30px; /* Nagyobb tér a gombokon belül */
-  margin: 0 20px; /* Margó a gombok között */
-  background-color: #5d4037; /* Barna háttérszín */
-  color: #ffcc00; /* Arany szín a gomb szövegéhez */
-  border: none; /* Nincs keret a nyelvváltó gomb körül */
-  border-radius: 10px; /* Lekerekített sarkak a gomboknál */
-  cursor: pointer; /* Kéz kurzor a nyelvváltó gombokra */
-  transition: background-color 0.3s, transform 0.2s; /* Simított átmenet a hover hatásokhoz */
+  padding: 15px 30px; /* Belső tér a gombok körül */
+  margin: 0 20px; /* Térköz a nyelvváltó gombok között */
+  background-color: #5d4037; /* Barna háttérszín a nyelvváltó gombokhoz */
+  color: #ffcc00; /* Arany szín a gombok szövegéhez */
+  border: none; /* Nincs keret a nyelvváltó gombokon */
+  border-radius: 10px; /* Lekerekített sarkak a nyelvváltó gombokon */
+  cursor: pointer; /* Mutató kéz kurzor a nyelvváltó gombokra */
+  transition: background-color 0.3s, transform 0.2s; /* Simított átmenet a hover állapothoz */
 }
 
 .language-switcher button.active {
-  background-color: #795548; /* Sötétebb háttérszín az aktív nyelvhez */
-  font-weight: bold; /* Félkövér az aktív gomb szövege */
+  background-color: #795548; /* Sötétebb barna háttér az aktív gombhoz */
+  font-weight: bold; /* Félkövér szöveg az aktív nyelvváltó gombnál */
 }
 
 .language-switcher button:hover {
-  background-color: #795548; /* Sötétebb barna hover esetén */
-  transform: scale(1.1); /* Nagyobb hover hatás */
+  background-color: #795548; /* Sötétebb barna, amikor az egér fölött van */
+  transform: scale(1.1); /* Nagyobb hover hatás a nyelvváltó gomboknál */
 }
 
-/* Újrakezdő gomb stílus */
 .restart-button {
-  display: flex; /* Flexbox használata a gomb belső elemeihez */
-  align-items: center; /* Középre igazítás a gomb tartalmában */
-  justify-content: center; /* A tartalom vízszintes középre igazítása */
+  display: flex; /* Flexbox elrendezés a gomb tartalmához */
+  align-items: center; /* Középre igazított tartalom a gombon belül */
+  justify-content: center; /* A tartalom vízszintesen középre igazítása */
   padding: 10px 20px; /* Tér a gomb szövege és széle között */
-  margin: 20px auto; /* Automatikus margók, hogy középre igazítsa a gombot */
+  margin: 20px auto; /* Automatikus margók a középre igazításhoz */
   background-color: #5d4037; /* Barna háttérszín */
   border: none; /* Nincs keret */
   border-radius: 10px; /* Lekerekített sarkak */
-  cursor: pointer; /* Kéz kurzor a gomb fölött */
-  font-size: 24px; /* Nagyobb betűméret */
-  color: #ffcc00; /* Arany szöveg */
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Simított átmenet hover állapothoz */
+  cursor: pointer; /* Mutató kéz kurzor a gomb fölött */
+  font-size: 24px; /* Nagyobb betűméret a gomb szövegéhez */
+  color: #ffcc00; /* Arany szín a gomb szövegéhez */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Simított átmenet hover esetén */
 }
 
 .restart-button:hover {
-  background-color: #795548; /* Sötétebb háttérszín hover esetén */
-  transform: scale(1.05); /* Nagyítás hover állapotban */
+  background-color: #795548; /* Sötétebb barna hover állapotban */
+  transform: scale(1.05); /* Enyhén nagyobb hover hatás */
 }
 
 .restart-button img {
-  margin-right: 10px; /* Tér az ikon és a szöveg között */
+  margin-right: 10px; /* Térköz az ikon és a szöveg között */
 }
 
 /* Start képernyő */
 .start-screen {
-  display: flex; /* Flexbox használata a képernyő középre igazításához */
-  flex-direction: column; /* A gyerek elemek függőlegesen helyezkednek el */
-  align-items: center; /* Középre igazított tartalom */
-  justify-content: center; /* A képernyő teljes magasságában középre igazítás */
-  min-height: 100vh; /* A képernyő teljes magasságának kitöltése */
-  text-align: center; /* Középre igazított szövegek */
+  display: flex; /* Flexbox elrendezés a start képernyőhöz */
+  flex-direction: column; /* A start képernyő elemei függőlegesen helyezkednek el */
+  align-items: center; /* Középre igazított tartalom a képernyőn */
+  justify-content: center; /* Függőleges középre igazítás */
+  min-height: 100vh; /* A start képernyő teljes magasságot foglal el */
+  text-align: center; /* Szövegek középre igazítása */
   color: #ffcc00; /* Arany szín a szövegekhez */
   background: radial-gradient(circle at center, #0e0e0e, #1b1b1b); /* Sötét, misztikus háttér, középen világosabb */
-  animation: fadeIn 2s ease-in-out; /* Lassú megjelenés */
+  animation: fadeIn 2s ease-in-out; /* Lassú megjelenés animáció */
 }
 
 .start-screen h1 {
-  font-size: 4rem; /* Nagy betűméret a címhez */
-  text-shadow: 0 0 20px #ffcc00, 0 0 30px #ffff99, 0 0 40px #ffcc00; /* Fénylő szövegárnyék */
-  margin-bottom: 40px; /* Térköz a cím alatt */
-  animation: flicker 3s infinite; /* Villódzó, varázslatos hatás */
+  font-size: 4rem; /* Nagy betűméret a címsorhoz */
+  text-shadow: 0 0 20px #ffcc00, 0 0 30px #ffff99, 0 0 40px #ffcc00; /* Fénylő árnyék a szöveg mögött */
+  margin-bottom: 40px; /* Térköz a címsor alatt */
+  animation: flicker 3s infinite; /* Folyamatosan villogó hatás */
 }
 
 @keyframes flicker {
@@ -191,34 +189,89 @@ body {
     opacity: 0.8; /* Enyhén halványabb */
   }
   100% {
-    opacity: 1; /* Vissza eredeti állapotba */
+    opacity: 1; /* Vissza teljesen látható állapotba */
   }
 }
 
 .start-button {
-  font-size: 32px; /* Nagy betűméret a gombhoz */
-  padding: 30px 60px; /* Nagy gomb, sok belső térrel */
-  background-color: #5d4037; /* Mély barna háttérszín */
-  color: #ffcc00; /* Arany szín a szövegekhez */
-  border: 3px solid #ffcc00; /* Arany szegély a gomb körül */
+  font-size: 32px; /* Nagy betűméret a start gombhoz */
+  padding: 30px 60px; /* Nagyobb belső tér a gombon belül */
+  background-color: #5d4037; /* Barna háttérszín */
+  color: #ffcc00; /* Arany szöveg */
+  border: 3px solid #ffcc00; /* Arany keret a gomb körül */
   border-radius: 15px; /* Lekerekített sarkak */
   cursor: pointer; /* Kéz kurzor a gomb fölött */
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Simított átmenet */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Simított átmenet hover állapothoz */
   box-shadow: 0 0 20px #ffcc00, 0 0 30px #ffff99, 0 0 40px #ffcc00; /* Fénylő gombhatás */
   margin-top: 40px; /* Térköz a gomb fölött */
 }
 
 .start-button:hover {
-  background-color: #795548; /* Sötétebb barna, amikor az egér fölött van */
-  transform: scale(1.1); /* Enyhén nagyobb hover hatás */
-  box-shadow: 0 0 40px #ffcc00, 0 0 60px #ffff99, 0 0 80px #ffcc00; /* Intenzívebb fény hover esetén */
+  background-color: #795548; /* Sötétebb barna hover állapotban */
+  transform: scale(1.1); /* Kicsit nagyobb gomb hover állapotban */
+  box-shadow: 0 0 40px #ffcc00, 0 0 60px #ffff99, 0 0 80px #ffcc00; /* Erősebb fény hatás hover állapotban */
 }
 
 @keyframes fadeIn {
   from {
-    opacity: 0; /* Kezdetben nem látható */
+    opacity: 0; /* Kezdetben láthatatlan */
   }
   to {
     opacity: 1; /* Fokozatosan láthatóvá válik */
+  }
+}
+
+/* Media queries a reszponzív designhoz */
+/* Kisebb képernyőkhöz */
+@media (max-width: 768px) {
+  .question-text {
+    font-size: 36px; /* Csökkenti a kérdés szövegének méretét mobilon */
+  }
+
+  .answer-section button {
+    height: 60px; /* Alacsonyabb gombok mobilon */
+    font-size: 24px; /* Kisebb betűméret a gomboknál */
+  }
+
+  .score-section {
+    font-size: 32px; /* Kisebb betűméret a pontszám kijelzésénél */
+    padding: 20px; /* Kevesebb belső tér mobilon */
+  }
+
+  .start-button {
+    font-size: 24px; /* Kisebb betűméret a start gombhoz mobilon */
+    padding: 20px 40px; /* Kisebb méretű gomb mobilon */
+  }
+
+  .language-switcher button {
+    font-size: 20px; /* Kisebb betűméret a nyelvváltó gomboknál */
+    padding: 10px 20px; /* Kevesebb belső tér a nyelvváltó gombokon */
+  }
+}
+
+/* Még kisebb képernyőkhöz (pl. kis mobilok) */
+@media (max-width: 480px) {
+  .question-text {
+    font-size: 28px; /* Még kisebb kérdésszöveg kis képernyőkön */
+  }
+
+  .answer-section button {
+    height: 50px; /* Még alacsonyabb gombok kis képernyőkön */
+    font-size: 20px; /* Kisebb betűméret a gomboknál kis képernyőkön */
+  }
+
+  .score-section {
+    font-size: 24px; /* Kisebb betűméret a pontszám kijelzésénél */
+    padding: 10px; /* Még kevesebb belső tér kis képernyőkön */
+  }
+
+  .start-button {
+    font-size: 20px; /* Kisebb betűméret a start gombhoz kis képernyőkön */
+    padding: 15px 30px; /* Kisebb méretű gombok kis képernyőkön */
+  }
+
+  .language-switcher button {
+    font-size: 18px; /* Kisebb betűméret a nyelvváltó gomboknál kis képernyőkön */
+    padding: 8px 16px; /* Kevesebb belső tér a nyelvváltó gombokon kis képernyőkön */
   }
 }
